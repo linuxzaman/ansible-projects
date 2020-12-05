@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
+  become_user: root
+  become: yes
   gather_facts: no
   tasks:
     - name: Check hostname

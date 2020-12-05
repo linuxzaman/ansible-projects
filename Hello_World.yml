@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: no
+  task:
+    - name: Check hostname
+      shell: hostname
+      register: output
+      
+    - name: display output
+      debug: var=output.stdout_lines
